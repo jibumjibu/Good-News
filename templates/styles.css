@@ -1,0 +1,94 @@
+/* Base styles */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.chat-box {
+  width: 90%; /* Use percentage for responsiveness */
+  max-width: 400px; /* Limit max width */
+  height: 90vh; /* Use viewport height */
+  max-height: 600px; /* Limit max height */
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  padding: 15px; /* Adjusted padding */
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem; /* Relative font size */
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 15px; /* Adjusted padding for mobile */
+  overflow-y: auto;
+  border-bottom: 1px solid #ccc;
+}
+
+.chat-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  height: auto; /* Flexible height */
+  background: #f9f9f9;
+  height: 75px;
+}
+
+.chat-input button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 5px;
+  font-size: 1rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .chat-box {
+      height: 80vh; /* Adjust height for smaller devices */
+  }
+
+  .chat-header {
+      font-size: 1rem; /* Smaller header font size */
+      padding: 10px;
+  }
+
+  .chat-messages {
+      padding: 10px; /* Reduced padding */
+  }
+
+  .chat-input button {
+      font-size: 0.9rem; /* Adjust button text size */
+      padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chat-box {
+      height: 85vh;
+  }
+
+  .chat-input {
+      flex-direction: column; /* Stack buttons vertically */
+  }
+
+  .chat-input button {
+      width: 100%; /* Full-width buttons */
+      margin: 5px 0;
+  }
+}
